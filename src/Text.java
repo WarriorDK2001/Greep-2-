@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Text {
     public static void main(String[] args) throws IOException {
-        Scanner regex = new Scanner(System.in);
-        String word = regex.next();
+        Scanner r = new Scanner(System.in);
+        String word = r.next();
         StringBuilder result = new StringBuilder();
         File output = new File("textTwo.txt");
         File input = new File("textOne.txt");
