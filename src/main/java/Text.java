@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class Text {
     public static void main(String[] args) throws IOException {
-       // Scanner r = new Scanner(System.in);
         String word = "Hello";
         String type = "r";
         File input = new File("textOne.txt");
