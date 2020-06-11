@@ -10,8 +10,6 @@ class Tests {
     public void Check() throws IOException {
     File input = new File("textOne.txt");
     Greep test = new Greep("Hello",input);
-     Text text = new Text();
-     text.Filter(test);
 
 }
 }
