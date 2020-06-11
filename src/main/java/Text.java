@@ -8,15 +8,12 @@ public class Text {
         File input = new File("textOne.txt");
         try {
             Scanner scanner = new Scanner(input);;
-            String line = scanner.nextLine();
-            if (type.equals("r")) {
                 while (scanner.hasNextLine()) {
+                    String line = scanner.nextLine();
                     if (line.contains(word)) {
                         System.out.println(line);
                     }
-                    line = scanner.nextLine();
                 }
-            }
         } catch (IOException e) {
             e.printStackTrace();
         }
