@@ -18,25 +18,6 @@ public class Text {
                     line = scanner.nextLine();
                 }
             }
-            if (type.equals("i")) {
-                word = word.toLowerCase();
-                line = line.toLowerCase();
-                while (scanner.hasNextLine()) {
-                    if (line.contains(word)) {
-                        System.out.println(line);
-                    }
-                    line = scanner.nextLine();
-                    line = line.toLowerCase();
-                }
-            }
-            if (type.equals("v")) {
-                while (scanner.hasNextLine()) {
-                    if (!line.contains(word)) {
-                        System.out.println(line);
-                    }
-                    line = scanner.nextLine();
-                }
-            }
         } catch (IOException e) {
             e.printStackTrace();
         }
