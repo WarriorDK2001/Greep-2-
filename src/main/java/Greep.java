@@ -5,11 +5,14 @@ import java.util.Scanner;
 public class Greep {
     public String word;
     public File input;
-
-    public Greep(String word, File input) {
-        this.word = word;
-        this.input = input;
+    
+    public Greep(String[] args) {
+        for (int i = 0; i < args.length; i++) {
+            if (i==0) this.word=args[i];
+            if (i==1) this.input= new File(args[i]);
+        }
     }
+
     public void greepPrint() throws IOException {
         try {
             Scanner scanner = new Scanner(input);
