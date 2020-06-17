@@ -12,16 +12,18 @@ public class Greep {
         for (int i = 0; i < args.length; i++) {
             this.word = args[0];
             this.input = new File(args[1]);
+            this.regex = makeRegex(word);
         }
     }
 
-    public void makeRegex(String word) {
+    public String makeRegex(String word) {
         String result = "";
         String[] splitWord = word.split("");
         for (int i = 0; i < splitWord.length; i++) {
             result += "[" + splitWord[i] + "]";
         }
         System.out.println(result);
+        return result;
     }
 
     public void greepPrint() throws IOException {
