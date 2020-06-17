@@ -1,16 +1,27 @@
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class Greep {
     public String word;
     public File input;
-    
+    public String regex;
+
     public Greep(String[] args) {
         for (int i = 0; i < args.length; i++) {
-            if (i==0) this.word=args[i];
-            if (i==1) this.input= new File(args[i]);
+            this.word = args[0];
+            this.input = new File(args[1]);
         }
+    }
+
+    public void makeRegex(String word) {
+        String result = "";
+        String[] splitWord = word.split("");
+        for (int i = 0; i < splitWord.length; i++) {
+            result += "[" + splitWord[i] + "]";
+        }
+        System.out.println(result);
     }
 
     public void greepPrint() throws IOException {
